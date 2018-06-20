@@ -16,7 +16,7 @@
 
 
 from __future__ import print_function
-
+import subprocess
 import argparse
 import json
 import os.path
@@ -121,6 +121,7 @@ def main():
 
     with Assistant(credentials, device_model_id) as assistant:
         events = assistant.start()
+        subprocess.Popen(["aplay", "/home/pi/GassistPi/sample-audio-files/Startup.wav"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         device_id = assistant.device_id
         print('device_model_id:', device_model_id)
