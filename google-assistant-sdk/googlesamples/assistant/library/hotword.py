@@ -121,7 +121,7 @@ def main():
 
     with Assistant(credentials, device_model_id) as assistant:
         events = assistant.start()
-        subprocess.Popen(["aplay", "/home/pi/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/library/winxp.mp3"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        subprocess.Popen(["omxplayer", "/home/pi/assistant-sdk-python/google-assistant-sdk/googlesamples/assistant/library/winxp.mp3"], stdin=subprocess.PIPE, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
         device_id = assistant.device_id
         print('device_model_id:', device_model_id)
