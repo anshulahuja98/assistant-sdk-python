@@ -145,7 +145,7 @@ def main():
             process_event(event)
             data = event.args
             print("data")
-            print(data)
+            print(str(data))
 
 if __name__ == '__main__':
     main()
