@@ -143,7 +143,9 @@ def main():
 
         for event in events:
             process_event(event)
-
+            data = event.args
+            print("data")
+            print(data)
 
 if __name__ == '__main__':
     main()
